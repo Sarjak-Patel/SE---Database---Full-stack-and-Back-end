@@ -1,0 +1,76 @@
+1   What do you understand by Database?
+Ans:- A database is an organized collection of structured information,or data, typically stored electronically
+       in a computer system.
+
+2   What is  Normalization?
+Ans:  Normalization:->Normalization is the process of organizing the data in a database.        
+		(i)It is used to minimize the redundancy from a relation or set of relations.        
+                (ii)It divides big table into small tables.
+
+3  What is difference between DBMS and RDBMS? 
+Ans:                    DBMS                                            RDBMS
+                                                      |
+   1. DBMS stands for DataBase Managemen stystem.     | 1.RDBMS stands for Relational DataBase Management
+                                                      |    System.
+   2. In DBMS data are store as a file.               | 2. In RDBMS data are store in a tabular form.
+   3. It does not support client server architecture. | 3. It support client server architecture.
+   4. Normalization is not available in DBMS.         | 4. Normalization is available in RDBMS.
+   5. It allows one user at a time.                   | 5. It allows more than one user at a time.
+   6.Heirarchical arrangement of data.                | 6. Stores data in the form of rows and column.
+   7.Data fetching is slower for the large amount     | 7. Data fetching is fast because of relational
+           of data.                                   |      approach.
+   8.It does not support ACID(Atomicity,              | 8. It support ACID property.
+      Consistency, Isolation,  Durability) property.  |
+   9.Data redundancy problem exist.                   | 9. Data redundancy problem does not exist.
+   10. e.g.- XML,Microsoft Access etc.                | 10 .e.g.- mysql,sql server,oracle etc.
+
+4. What is MF Cod Rule of RDBMS Systems?
+Ans: 
+
+5 What do you understand by Data Redundancy?
+Ans:  Data redundancy is when multiple  copies of the same information are stored in more than one place at a
+       time and is a common occurrence in many businesses.
+ 
+
+6 What is DDL Interpreter?
+Ans:  DDL Interpreter:-> It interprets the DDL(Data Definition Language) statements and stores the record
+                          in a data dictionary(in a table containing meta-data(data about data)).
+     DDL statements-   CREATE,DROP,TRUNCATE,ALTER,RENAME. 
+
+7 What is DML compiler in SQL?
+Ans: DML compiler:-> It translates DML(Data Manipulation Language) statements in a query language within 
+                      low level instructions understandable through the query evaluation engine.
+     DML statements-  INSERT, UPDATE, DELETE.
+
+8  What is SQL key constraints writing an example of SQL key constraints? 
+Ans:  SQL constraints are used to specify rules for the data in a table.
+      Types of key constraints:                      
+             1. A PRIMARY KEY is a field which can uniquely identify each row in a table.
+             2. NOT NULL constraints tells that we cannot store a null value in a column.
+             3. A FOREIGN KEY is a field which can uniquely identify each row  in another table.    
+             4. CHECK constraint helps to validate the value of a column to meet a particular condition. 
+             5. DEFAULT constraints specifies a default value for the column when no value is specified by 
+                    the user.
+             6.UNIQUE constraints tells that the values in the column must be unique.
+    EXAMPLE:-> CREATE TABLE  persons(
+                    ID (int) NOT NULL PRIMARY KEY, Name varchar(250) NOT NULL, Age (int));
+
+ 
+9 What is save point? How to create a save point write Query?
+Ans:  A save point is a point in atransaction in which we can roll the transaction back to a certain point 
+      without rolling back the entire transaction.
+
+10 What is trigger and how to create a Trigger in SQL? 
+Trigger:
+ A trigger is a set of actions that are run automatically when a specified
+ change operation (SQL INSERT, UPDATE, or DELETE statement) is performed on a
+ specified table. Triggers are useful for tasks such as enforcing business rules,
+ validating input data, and keeping an audit trail.
+
+The CREATE TRIGGER statement creates a new trigger. 
+Here is the basic syntax of the CREATE TRIGGER statement:
+Syntax :
+CREATE TRIGGER trigger_name
+{BEFORE | AFTER} { INSERT | UPDATE| DELETE }
+ON table_name FOR EACH ROW
+trigger_body;
